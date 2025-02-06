@@ -14,10 +14,11 @@ app.get('/api/classify-number', async (req, res) => {
   const { number } = req.query;
   const num = parseInt(number);
 
-  if (isNaN(num)) {
+  // Validate number
+  if (!number || isNaN(number)) {
     return res.status(400).json({
-      number,
       error: true,
+      message: 'Invalid or missing number',
     });
   }
 
