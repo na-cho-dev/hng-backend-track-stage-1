@@ -80,6 +80,6 @@ const sumDigits = (n) => {
   return n.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
 }
 
-app.listen(3300, () => {
+app.listen(8080, () => {
     console.log('Server running on port 3300');
 });
